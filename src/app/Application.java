@@ -1,25 +1,24 @@
 package app;
 
+import java.util.ArrayList;
+import models.Personne;
+
 public class Application {
 
     public static void main(String[] args) {
 
-        //  --------------------------------------------------        
-        //           __     _____ _____ ____  _____ 
-        //           \ \   / / _ \_   _|  _ \| ____|
-        //            \ \ / / | | || | | |_) |  _|  
-        //             \ V /| |_| || | |  _ <| |___ 
-        //              \_/__\___/_|_|_|_| \_\_____|
-        //                / ___/ _ \|  _ \| ____|   
-        //               | |  | | | | | | |  _|     
-        //               | |__| |_| | |_| | |___    
-        //                \____\___/|____/|_____|   
-        //                    |_ _/ ___|_ _|        
-        //                     | | |    | |         
-        //                     | | |___ | |         
-        //                    |___\____|___|        
-        //                                                  
-        //  ---------------------------------------------------
+        ArrayList<Personne> personnes = new ArrayList<>();
+
+        Personne personne1 = new Personne("Kaeser", "Patrick", "Rue de Laussane", "Fribourg", 1700);
+        Personne personne2 = new Personne("Terrier", "Rafael", "Rte de Perolle", "Fribourg", 1700);
+        Personne personne3 = new Personne("Thevoz", "Boris", "là-bas", "Fribourg", 1700);
+        personnes.add(personne1);
+        personnes.add(personne2);
+        personnes.add(personne3);
+
+        for (Personne personne : personnes) {
+            System.out.println(personne.getNom());
+        }
 
     }
 
